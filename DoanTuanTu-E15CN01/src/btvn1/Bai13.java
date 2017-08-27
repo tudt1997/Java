@@ -11,20 +11,23 @@ import java.util.Scanner;
  *
  * @author Tu
  */
-public class Bai08 {
+public class Bai13 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap n: ");
+        System.out.print("Nhap so: ");
         int n = scanner.nextInt();
-        double s = tinh(n);
-        System.out.println("S = " + s);
+        phanTich(n);
     }
-    
-    public static double tinh(int n) {
-        double s = 0;
-        for (int i = 1; i <= n; i++) {
-            s += 1.0 / i;
+
+    public static void phanTich(int n) {
+        System.out.print(n + " = ");
+        int m = n;
+        for (int i = 2; i <= n / 2; i++) {
+            while (m % i == 0) {
+                System.out.print(i + " * ");
+                m /= i;
+            }
         }
-        return s;
+        System.out.printf("\b\b");
     }
 }

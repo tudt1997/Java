@@ -14,9 +14,7 @@ import java.util.Scanner;
 public class Bai01 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap chieu rong: ");
         int rong = scanner.nextInt();
-        System.out.print("Nhap chieu cao: ");
         int cao = scanner.nextInt();
         in(cao, rong);
     }

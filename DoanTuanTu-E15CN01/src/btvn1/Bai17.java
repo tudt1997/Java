@@ -5,25 +5,24 @@
  */
 package btvn1;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Tu
  */
-public class Bai12 {
+public class Bai17 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhap so: ");
-        int n = scanner.nextInt();
-        int s = tinh(n);
-        System.out.println("Tong cac chu so cua " + n + " la " + s);
+        for (int i = 100; i <= 999; i++) {
+            if (i % 10 != 0) {
+                System.out.print(i);
+                System.out.println(dao(i));
+            }
+        }
     }
-    
-    public static int tinh(int n) {
+
+    public static int dao(int n) {
         int s = 0;
         while (n > 0) {
-            s += n % 10;
+            s = s * 10 + n % 10;
             n /= 10;
         }
         return s;

@@ -19,16 +19,16 @@ public class Bai07 {
         int s = tinh(n);
         System.out.println("S = " + s);
     }
-    
+
     public static int tinh(int n) {
         int s = 0;
         if (n % 2 == 0) {
-            for (int i = 1; i <= n / 2; i++) {
-                s += i * 2;
+            for (int i = 2; i <= n; i += 2) {
+                s += i;
             }
         } else {
-            for (int i = 0; i <= n / 2; i++) {
-                s += i * 2 + 1;
+            for (int i = 1; i <= n; i += 2) {
+                s += i;
             }
         }
         return s;
