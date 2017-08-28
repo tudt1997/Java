@@ -12,14 +12,18 @@ package btvn1;
 public class Bai21 {
     public static void main(String[] args) {
         for (int i = 100; i <= 999; i++) {
-            if (i % 10 != 0 && tong(i) % 5 == 0) {
+            if (tong(i) % 5 == 0) {
                 System.out.print(i);
+                if (i % 10 == 0)
+                    System.out.print('0');
+                if (i % 100 == 0)
+                    System.out.print('0');
                 System.out.println(dao(i));
             }
         }
     }
 
-    public static int dao(int n) {
+    private static int dao(int n) {
         int s = 0;
         while (n > 0) {
             s = s * 10 + n % 10;
@@ -28,7 +32,7 @@ public class Bai21 {
         return s;
     }
 
-    public static int tong(int n) {
+    private static int tong(int n) {
         int s = 0;
         while (n > 0) {
             s += n % 10;

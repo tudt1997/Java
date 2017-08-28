@@ -12,14 +12,18 @@ package btvn1;
 public class Bai22 {
     public static void main(String[] args) {
         for (int i = 100; i <= 999; i++) {
-            if (i % 10 != 0 && kt(i)) {
+            if (kt(i)) {
                 System.out.print(i);
+                if (i % 10 == 0)
+                    System.out.print('0');
+                if (i % 100 == 0)
+                    System.out.print('0');
                 System.out.println(dao(i));
             }
         }
     }
 
-    public static int dao(int n) {
+    private static int dao(int n) {
         int s = 0;
         while (n > 0) {
             s = s * 10 + n % 10;
@@ -28,7 +32,7 @@ public class Bai22 {
         return s;
     }
 
-    public static boolean kt(int n) {
+    private static boolean kt(int n) {
         int s;
         while (n > 0) {
             s = n % 10;
